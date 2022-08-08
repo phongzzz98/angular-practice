@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 10vh;
+}
+.add-btn{
+    width: 20%;
+    height: 30px;
+    font-weight: 600;
+    font-size: large;
+}
+.todo-container{
+    padding: 15px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}

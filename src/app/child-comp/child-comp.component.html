@@ -1,0 +1,15 @@
+<div *ngIf="!toggleEdit" class="todo-item">
+    <span class="todo-desc">{{todo.description}}</span>
+    <div class="todo-actions">
+        <span class="todo-time">{{todo.time | date: 'EE MM hh:mm'}}</span>
+        <button (click)="toggleEditTodo()" >Edit</button>
+        <button (click)="deleteTodo()" >Delete</button>
+    </div>
+</div>
+<div *ngIf="toggleEdit" class="todo-item">
+    <input class="todo-desc-edit" type="text" [(ngModel)]="editDesc">
+    <div class="todo-actions">
+        <button (click)="editTodo()">Edit</button>
+        <button (click)="toggleEditTodo()" >Cancel</button>
+    </div>
+</div>

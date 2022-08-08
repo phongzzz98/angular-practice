@@ -1,0 +1,10 @@
+<div class="header">
+  <h3>Todos</h3>
+  <button class="add-btn" (click)="toggle()">{{!toggleInput ? '+ Add Todo': 'Cancel'}}</button>
+</div>
+<app-input-modal *ngIf="toggleInput" (newItemEvent)="addNewTodo($event)" [todoList]="todoList"></app-input-modal>
+<div class="todo-container">
+  <app-child-comp (editItemEvent)="editTodo($event)" (deleteItemEvent)="deleteTodo($event)"
+    *ngFor="let todo of todoList" [todo]="todo">
+  </app-child-comp>
+</div>
